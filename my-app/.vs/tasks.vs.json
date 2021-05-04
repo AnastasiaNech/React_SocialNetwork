@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Header",
+      "appliesTo": "src/components/Header.js",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-Header (2)",
+      "appliesTo": "src/components/Header (2).jsx",
+      "type": "launch"
+    }
+  ]
+}

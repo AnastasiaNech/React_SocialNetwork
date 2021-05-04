@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Dialogs",
+    "\\src\\components\\Header",
+    "\\src\\components\\Navbar",
+    "\\src\\components\\Profile",
+    "\\src\\components\\Profile\\MyPosts",
+    "\\src\\components\\Profile\\MyPosts\\Post"
+  ],
+  "SelectedNode": "\\src\\components\\Profile\\MyPosts\\MyPosts.jsx",
+  "PreviewInSolutionExplorer": false
+}
