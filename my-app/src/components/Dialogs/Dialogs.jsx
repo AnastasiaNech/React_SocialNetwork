@@ -10,15 +10,11 @@ const Dialogs = (props) => {
     let messageElements = props.state.messages.map (m => <Message message={m.message} id={m.id} />);
 
     return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
-                { dialogElements }
-            </div>
-            <div className={s.messages}>
+        <div className={s.messages}>
                 <div className={s.message}>
-                    { messageElements }
+                {dialogElements}
+                {messageElements}
                 </div>
-            </div>
         </div>
     );
 }

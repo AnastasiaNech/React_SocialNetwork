@@ -13,6 +13,12 @@
         text-decoration:none;
     }
 
-    .item a.activLink {
+    .item a.activeLink {
         color: #763626;
     }
+
+.friends{
+    color: white;
+    font-size: 25px;
+    margin-top: 40px;
+}
