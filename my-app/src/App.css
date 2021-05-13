@@ -1,3 +1,7 @@
+.background-image {
+    background-color: #FFF0F5;
+}
+
 .app-wrapper {
     margin: 0 auto;
     display: grid;
