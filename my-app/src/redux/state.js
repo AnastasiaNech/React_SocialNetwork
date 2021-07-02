@@ -1,5 +1,6 @@
 import React from 'react';
-import {renderTree} from "../render";
+
+let renderTree =  () => {}
 
 let state = {
     profilePage: {
@@ -24,7 +25,7 @@ let state = {
 
 }
 
-export let addPost = (postMessage) => {
+export const addPost = (postMessage) => {
     let newPost = {
         id: 3,
         message: state.profilePage.newPostText,
@@ -32,12 +33,16 @@ export let addPost = (postMessage) => {
     };
     state.profilePage.posts.push(newPost);
     state.profilePage.newPostText = '';
-    renderTree(state);
+    renderTree();
 }
 
-export let updatePost = (newPostText) => {
+export const updatePost = (newPostText) => {
     state.profilePage.newPostText = newPostText;
-    renderTree(state);
+    renderTree();
+}
+
+export const subscribe = (observer) => {
+    renderTree = observer; //паттерн observer
 }
 
 export default state;
