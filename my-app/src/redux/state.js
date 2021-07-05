@@ -41,7 +41,7 @@ let store = {
 
     updatePost (newPostText)  {
         this._state.profilePage.newPostText = newPostText;
-        this._state._callSubscriber();
+        this._callSubscriber();
     },//метод  объекта store
     subscribe (observer) {
         this._callSubscriber = observer; //паттерн observer
