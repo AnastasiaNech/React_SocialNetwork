@@ -7,7 +7,6 @@ let store = {
                 {id: 1, message: 'Hi, how are you?', likesCount: '15'},
                 {id: 2, message: 'Its my first post', likesCount: '0'}
             ],
-            newPostText: '1'
         },
         dialogsPage: {
             messages: [
@@ -21,14 +20,17 @@ let store = {
                 {id: 3, name: 'Nadia'}
             ]
         }
-
     },
+    _callSubscriber() { }, //метод  объекта store
     getState () {
         return this._state;
     },
-    _callSubscriber() { }, //метод  объекта store
+    subscribe (observer) {
+        this._callSubscriber = observer; //паттерн observer
+    },
 
-    addPost (postMessage) {
+    dispatch(action){  //{ type : 'ADD-POST'}
+    if(action === 'ADD-POST'){
         let newPost = {
             id: 3,
             message: this._state.profilePage.newPostText,
@@ -37,14 +39,12 @@ let store = {
         this._state.profilePage.posts.push(newPost);
         this._state.profilePage.newPostText = '';
         this._callSubscriber(this._state);
-    }, //метод  объекта store
-
-    updatePost (newPostText)  {
-        this._state.profilePage.newPostText = newPostText;
+    }
+    else if (action === 'UPDATE-NEW-POST-TEXT')
+    {
+        this._state.profilePage.newPostText = action.newPostText;
         this._callSubscriber();
-    },//метод  объекта store
-    subscribe (observer) {
-        this._callSubscriber = observer; //паттерн observer
+    }
     },
 
 }
