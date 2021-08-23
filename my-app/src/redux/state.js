@@ -10,6 +10,7 @@ let store = {
                 {id: 1, message: 'Hi, how are you?', likesCount: '15'},
                 {id: 2, message: 'Its my first post', likesCount: '0'}
             ],
+            newPostText: 'it'
         },
         dialogsPage: {
             messages: [
@@ -22,7 +23,8 @@ let store = {
                 {id: 2, name: 'Rost'},
                 {id: 3, name: 'Nadia'}
             ]
-        }
+        },
+        sidebar : {}
     },
     _callSubscriber() {
     }, //метод  объекта store
