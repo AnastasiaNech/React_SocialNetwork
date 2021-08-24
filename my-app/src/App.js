@@ -14,12 +14,12 @@ const App = (props) => {
             <div className='background-image'>
             <div className='app-wrapper'>
                 <Header />
-                <Navbar state = {props.appState.dialogsPage} />
+                <Navbar state = {props.state.dialogsPage} />
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs'
-                           render={() => <Dialogs state = {props.appState.dialogsPage}/>} />
+                           render={() => <Dialogs store = {props.store}/>} />
                     <Route path='/profile'
-                           render={() => <Profile profilePage = {props.appState.profilePage}
+                           render={() => <Profile profilePage = {props.state.profilePage}
                                                   dispatch = {props.dispatch}/>} />
                     <Route path='/news'
                            render={() => <News/>} />
